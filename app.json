@@ -1,0 +1,25 @@
+{
+  "name": "Telegram Report Bot",
+  "description": "A Telegram bot for reporting posts from groups and channels.",
+  "repository": "https://github.com/Prince-private-repo/report-bot",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Telegram bot token from BotFather",
+      "required": true
+    },
+    "ADMIN_CHAT_ID": {
+      "description": "Admin chat ID where reports will be sent",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  }
+}
